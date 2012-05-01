@@ -25,9 +25,9 @@ and patches for how to improve performance.
 :
 : corpus = Corpus.new
 :
-: doc1 = Document.new("Broad powers for hacking inquiry")
-: doc2 = Document.new("UK unemployment level falls again")
-: doc3 = Document.new("NI riots leads to 26 arrests")
+: doc1 = Document.new({:content=>"Broad powers for hacking inquiry"})
+: doc2 = Document.new({:content=>"UK unemployment level falls again"})
+: doc3 = Document.new({:content=>"NI riots leads to 26 arrests"})
 :
 : corpus << doc1
 : corpus << doc2
