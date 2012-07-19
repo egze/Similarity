@@ -1,20 +1,15 @@
 class Document
-  attr_reader :content
 
-  def initialize(text)
-    if text && !text.empty?
-      @content = text
-      @term_frequency = nil
-      @terms = nil
-    else
-      raise ArgumentError, "text cannot be nil or blank"
-    end
+  attr_accessor :key
+
+  def initialize(key, terms)
+    @key = key
+    @term_frequency = nil
+    @terms = terms.map { |term| term.downcase }
   end
 
   def terms
-    @terms ||=
-      @content.gsub(/(\d|\s|\W)+/, ' ').
-      split(/\s/).map { |term| term.downcase }
+    @terms
   end
 
   def term_frequencies
