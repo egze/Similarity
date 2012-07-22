@@ -24,7 +24,7 @@ class Corpus
 
   def document_count_for_term(term)
     if @terms[term]
-      @terms[term]
+      @terms[term].to_i
     else
       0
     end
