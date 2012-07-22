@@ -1,9 +1,9 @@
 class Corpus
-  attr_reader :terms, :document_count
+  attr_accessor :terms, :document_count
 
-  def initialize
-    @terms = {}
-    @document_count = 0
+  def initialize(terms = {}, document_count = 0)
+    @terms = terms
+    @document_count = document_count
   end
 
   def <<(document)
